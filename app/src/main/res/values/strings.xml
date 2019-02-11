@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WearDemo</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="hello">Hello!!!</string>
+    <string name="wel_android">Welcome to wear android studio </string>
+    <string name="notify">Notify Wearable</string>
+    <string name="welcome_to_wear_android">Welcome to wear android</string>
+
+</resources>

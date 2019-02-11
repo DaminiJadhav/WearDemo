@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.syntagi.weardemo">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat">
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".Circular_image" />
+        <activity android:name=".Notification_activity" />
+        <activity android:name=".Wearable_listview" />
+        <activity android:name=".Button_click" />
+        <activity android:name=".Panel_activity" />
+        <activity android:name=".Navigation_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GridViewpager_Activity" />
+        <activity android:name=".cardlayout_Activity" />
+        <activity android:name=".card_activity" />
+        <activity android:name=".send_msg" />
+        <activity android:name=".BroadcastReceiver_activity" />
+        <activity android:name=".Timer_activity">
+
+        </activity>
+        <activity android:name=".Notification_ac"></activity>
+    </application>
+
+</manifest>

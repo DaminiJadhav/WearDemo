@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Navigation_activity"
+    android:orientation="horizontal">
+
+    <androidx.wear.widget.drawer.WearableDrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawable">
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true">
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/android"
+                    android:id="@+id/img_view"
+                    android:layout_marginTop="80dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt"
+                    android:text="Hello!!!!!!!!"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+<androidx.wear.widget.drawer.WearableNavigationDrawerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navigation"
+    />
+<android.support.wearable.view.drawer.WearableActionDrawer
+    android:id="@+id/action_drawer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:drawer_title="@string/wel_android"/>
+
+   </androidx.wear.widget.drawer.WearableDrawerLayout>
+
+
+</LinearLayout>
