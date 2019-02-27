@@ -4,8 +4,11 @@
 
     <uses-feature android:name="android.hardware.type.watch" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
 
     <application
         android:allowBackup="true"
@@ -43,21 +46,23 @@
         <activity android:name=".Button_click" />
         <activity android:name=".Panel_activity" />
         <activity android:name=".Navigation_activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".GridViewpager_Activity" />
         <activity android:name=".cardlayout_Activity" />
         <activity android:name=".card_activity" />
         <activity android:name=".send_msg" />
         <activity android:name=".BroadcastReceiver_activity" />
-        <activity android:name=".Timer_activity">
+        <activity android:name=".Timer_activity"></activity>
+        <activity android:name=".Notification_ac" />
+        <activity android:name=".Reminder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".Notification_ac"></activity>
+        <receiver android:name=".AlarmReceiver"/>
     </application>
 
 </manifest>

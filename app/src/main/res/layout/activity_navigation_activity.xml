@@ -30,7 +30,7 @@
                     android:src="@drawable/android"
                     android:id="@+id/img_view"
                     android:layout_marginTop="80dp"
-                    />
+                        />
 
                 <TextView
                     android:layout_width="match_parent"
