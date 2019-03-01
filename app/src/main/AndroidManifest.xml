@@ -3,12 +3,11 @@
     package="com.example.syntagi.weardemo">
 
     <uses-feature android:name="android.hardware.type.watch" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
 
     <application
         android:allowBackup="true"
@@ -45,24 +44,29 @@
         <activity android:name=".Wearable_listview" />
         <activity android:name=".Button_click" />
         <activity android:name=".Panel_activity" />
-        <activity android:name=".Navigation_activity">
-
-        </activity>
+        <activity android:name=".Navigation_activity" />
         <activity android:name=".GridViewpager_Activity" />
         <activity android:name=".cardlayout_Activity" />
         <activity android:name=".card_activity" />
         <activity android:name=".send_msg" />
         <activity android:name=".BroadcastReceiver_activity" />
-        <activity android:name=".Timer_activity"></activity>
+        <activity android:name=".Timer_activity" />
+        <activity android:name=".ChartActivity" />
         <activity android:name=".Notification_ac" />
-        <activity android:name=".Reminder">
+        <activity android:name=".Reminder" />
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <activity android:name=".BarChartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".AlarmReceiver"/>
+        <activity android:name=".BarChartActivity1" />
+        <activity android:name=".PieChartActivity" />
+        <activity android:name=".LineChartActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_match"
+    android:orientation="vertical"
+    tools:context=".BarChartActivity">
+
+  <Button
+      style="@style/chart_btn"
+      android:id="@+id/bar_chart_button"
+      android:text="Bar Chart"/>
+
+    <Button
+        style="@style/chart_btn"
+        android:id="@+id/pie_chart_button"
+        android:text="Pie Chart"/>
+
+  <Button
+      style="@style/chart_btn"
+      android:id="@+id/line_chart_button"
+      android:text="Line Chart"/>
+</LinearLayout>

@@ -33,11 +33,15 @@ public class AlarmService extends IntentService {
 
         PendingIntent pendingIntent=PendingIntent.getActivity(this,0,new Intent(this,Reminder.class),PendingIntent.FLAG_UPDATE_CURRENT);
 
+
+//        Uri sounduri=Uri.parse("android.resource://" + getApplicationContext().getPackageName() + "/" + R.raw.alarm_ring);
         NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"channel_id")
                                                                  .setContentTitle("Alarm")
                                                                  .setSmallIcon(R.drawable.alarm)
                                                                  .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
                                                                  .setContentText(msg).setAutoCancel(true);
+
+
 
      builder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
      builder.setContentIntent(pendingIntent);
