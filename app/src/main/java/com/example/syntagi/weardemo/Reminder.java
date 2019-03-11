@@ -7,6 +7,9 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.icu.util.Calendar;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +22,8 @@ public class Reminder extends AppCompatActivity {
     PendingIntent pendingIntent;
     AlarmManager alarmManager;
     TimePicker alarmTimePicker;
+    int mHour,mMinute;
+    String am_pm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,21 @@ public class Reminder extends AppCompatActivity {
         setContentView(R.layout.activity_reminder);
       alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        alarmTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                mHour=hourOfDay;
+                mMinute=minute;
+                if (mHour>=12){
+                    am_pm="PM";
+                    mHour=mHour-12;
+                }else {
+                    am_pm="AM";
+                }
+
+            }
+        });
 
     }
 
@@ -49,7 +69,11 @@ public class Reminder extends AppCompatActivity {
                  }
 
              }
+
+            Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+            Ringtone ringtone=RingtoneManager.getRingtone(getApplicationContext(),notification);
              alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,time,10000,pendingIntent);
+
 
         }
         else {

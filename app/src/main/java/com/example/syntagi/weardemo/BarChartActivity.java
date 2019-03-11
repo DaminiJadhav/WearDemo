@@ -17,7 +17,7 @@ public class BarChartActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
 
-        setOnClickListener(R.id.bar_chart_button, R.id.pie_chart_button,R.id.line_chart_button);
+        setOnClickListener(R.id.bar_chart_button, R.id.pie_chart_button,R.id.line_chart_button,R.id.point_chart_button);
     }
 
     @Override
@@ -35,6 +35,10 @@ public class BarChartActivity extends AppCompatActivity implements View.OnClickL
                 Intent line=new Intent(BarChartActivity.this,LineChartActivity.class);
                 startActivity(line);
                 break;
+            case R.id.point_chart_button:
+                Intent point=new Intent(BarChartActivity.this,GraphViewPointActivity.class);
+                startActivity(point);
+
 
         }
 

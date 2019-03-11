@@ -24,14 +24,11 @@ public class LineChartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_line_chart);
         linechartview=findViewById(R.id.linechartview);
 
-
-
         String [] xaxisData={"Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"};
         int [] yaxisData={50,20,15,30,20,60,15,40,45,10,90,18};
 
         List xaxisValue=new ArrayList();
         List yaxisValue=new ArrayList();
-
         Line line=new Line(yaxisValue);
 
         for (int i=0;i<xaxisValue.size();i++){

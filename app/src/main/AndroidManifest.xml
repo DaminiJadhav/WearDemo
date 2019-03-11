@@ -3,6 +3,7 @@
     package="com.example.syntagi.weardemo">
 
     <uses-feature android:name="android.hardware.type.watch" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -53,20 +54,22 @@
         <activity android:name=".Timer_activity" />
         <activity android:name=".ChartActivity" />
         <activity android:name=".Notification_ac" />
-        <activity android:name=".Reminder" />
+        <activity android:name=".Reminder" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <receiver android:name=".AlarmReceiver" />
 
         <activity android:name=".BarChartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".BarChartActivity1" />
         <activity android:name=".PieChartActivity" />
-        <activity android:name=".LineChartActivity"></activity>
+        <activity android:name=".LineChartActivity" />
+        <activity android:name=".GraphViewPointActivity"></activity>
     </application>
 
 </manifest>
